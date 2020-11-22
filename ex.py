@@ -168,10 +168,17 @@ def testMap():
     seq = [1,2,3,4]
     m = map(times2,seq)
     ml = list(m)
+    ms = map(str,ml)
+    msl = list(ms)
     print(type(m))
     print(m)
     print(type(ml))
     print(ml)
+    print(ml[0])
+    print(type(ml[0]))
+    print(msl[0])
+    print(type(msl[0]))
+    print('\n'.join(map(str,ml)))
 
 def testLambda():
     seq = [1,2,3,4]
@@ -206,25 +213,24 @@ def testTupleUnpacking():
         print (item)
     for a,b in x:
         print (b)
-        
     
 def main():
-    testString()
-    testList()
-    dictionaries()
-    testBool()
-    testTuples()
-    testSets()
-    testLogicOperations()
-    testIfElse()
-    testLoops()
-    testListComprehension()
-    testRange()
+    #testString()
+    #testList()
+    #dictionaries()
+    #testBool()
+    #testTuples()
+    #testSets()
+    #testLogicOperations()
+    #testIfElse()
+    #testLoops()
+    #testListComprehension()
+    #testRange()
     testMap()
-    testLambda()
-    testFilter()
-    testBis()
-    testTupleUnpacking()
+    #testLambda()
+    #testFilter()
+    #testBis()
+    #testTupleUnpacking()
     
 if __name__ == "__main__":
     main()
