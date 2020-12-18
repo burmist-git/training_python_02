@@ -153,6 +153,12 @@ def testListComprehension():
     out2=[num*2 for num in x]
     print(out)
 
+def testListComprehensionBis():
+    print('[for for]')
+    [ print('i = {}, j = {}'.format(i,j)) for i in range(3) for j in range(3)]
+    print('[[for]for]')
+    [ [print('i = {}, j = {}'.format(i,j)) for i in range(3)] for j in range(3)]
+    
 def testRange():
     rr=range(0,5)
     rrl=list(range(0,5))
@@ -186,6 +192,9 @@ def testLambda():
     print(seq)
     print(out)
 
+def testLambdaListComprehension():
+    [(lambda i: [print('i = {}, j = {}'.format(i,j)) for j in range(i)])(i+1) for i in range(3)]
+    
 def testFilter():
     seq = [1,2,3,4]
     out = list(filter(lambda v:v%2==0,seq))
@@ -225,9 +234,11 @@ def main():
     #testIfElse()
     #testLoops()
     #testListComprehension()
+    #testListComprehensionBis()
     #testRange()
-    testMap()
+    #testMap()
     #testLambda()
+    testLambdaListComprehension()
     #testFilter()
     #testBis()
     #testTupleUnpacking()
